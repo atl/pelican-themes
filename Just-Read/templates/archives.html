@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Archivo - {{ SITENAME }}{% endblock %}
+{% block title %}Archive - {{ SITENAME }}{% endblock %}
 
 {% block scripts %}
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -11,11 +11,11 @@
 <div role="main" class="content clearfix">
 <div id="jquerytabs" class="wrapper main">
 	<ul class="tabmenu clearfix">
-		<li><a href="#fecha">By date</a></li>
-		<li><a href="#etiqueta">By topic</a></li>
+		<li><a href="#date">By date</a></li>
+		<li><a href="#tag">By tag</a></li>
 	</ul>
 	
-	<div id="fecha">	
+	<div id="date">	
 	{% for year, date_year in dates|groupby( 'date.year' )|sort(reverse=True) %}	
 		<h2>{{ year }}</h2>
 		<ol class="archive">
@@ -26,7 +26,7 @@
 	{% endfor %}
 	</div>
 	
-	<div id="etiqueta">
+	<div id="tag">
 		<h2>Tags</h2>
 		<ul class="tag">
 		{% for tag in tag_cloud|sort %}
