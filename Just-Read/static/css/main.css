@@ -32,8 +32,8 @@ a:active {
 }
 pre {
   white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  overflow-x: scroll;
+  text-wrap: none;
 }
 ol,
 ul {
@@ -188,7 +188,7 @@ code,
   -webkit-box-shadow: inset 0 0 10px #ffffff;
   -moz-box-shadow: inset 0 0 10px #ffffff;
   box-shadow: inset 0 0 10px #ffffff;
-  color: #ffffff;
+  color: #000000;
   display: block;
   margin-left: -24px;
   font-family: 'Droid Sans Mono', monospace;
