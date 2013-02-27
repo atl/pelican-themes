@@ -6,9 +6,9 @@
 <div class="wrapper main">  	
 	<h2>Categories</h2>
 	
-	<ul class="category">
+	<ul class="tag">
     {% for category, articles in categories %}
-    <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+    <li class="tag-3"><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
     {% endfor %}
 	</ul>
 
