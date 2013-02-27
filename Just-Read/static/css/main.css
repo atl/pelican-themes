@@ -558,7 +558,8 @@ code,
 .post ul,
 .post ol,
 p,
-.archive {
+.archive,
+.post dl {
   margin: 0 0 24px 0;
 }
 .main + .main {
@@ -619,7 +620,8 @@ p,
   .post > p,
   .post blockquote,
   .post ul,
-  .post ol {
+  .post ol,
+  .post dl {
     width: 66.66666666666667%;
   }
   .main {
@@ -700,7 +702,8 @@ p,
   .post > p,
   .post blockquote,
   .post ul,
-  .post ol {
+  .post ol,
+  .post dl {
     width: 60%;
   }
 }
