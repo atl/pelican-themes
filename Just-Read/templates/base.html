@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="{{ HTML_LANG }}">	
+<html lang="{{ HTML_LANG }}" prefix="og: http://ogp.me/ns#">	
 <head>
 	<meta charset="utf-8"/>
 	<title>{% block title %}{{ SITENAME }}{%endblock%}</title>	
 	<meta name="author" content="{{ AUTHOR }}">
-	
+	{% block pagemeta %} {% endblock %}
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">

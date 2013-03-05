@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }}- {{ SITENAME }}{% endblock %}
+{% block pagemeta %}<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@{{ TWITTER_NAME }}">
+	<meta name="twitter:creator" content="@{{ TWITTER_NAME }}">
+	<meta property="og:url" content="{{ SITEURL }}/{{ page.url }}">
+	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:description" content="{{ page.summary|striptags|truncate(length=197) }}">
+{% endblock %}
 {% block content %}
 <div role="main" class="content clearfix">	
 	<div class="post wrapper">
