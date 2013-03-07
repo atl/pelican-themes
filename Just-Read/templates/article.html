@@ -1,5 +1,17 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+{% block scripts %}
+	<script>
+		if (parent.frames.length > 0) {
+		  top.location.replace(document.location);
+		  setTimeout(function() {
+		    if (parent.frames.length > 0) {
+		      document.location = "{{ SITEURL }}/{{ article.url }}";;
+		    }
+		  }, 10);
+		}
+	</script>
+{% endblock %}
 {% block pagemeta %}<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="@{{ TWITTER_NAME }}">
 	<meta name="twitter:creator" content="@{{ TWITTER_NAME }}">
